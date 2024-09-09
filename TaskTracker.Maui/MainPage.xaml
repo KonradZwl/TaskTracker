@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaskTracker.Maui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="Track the task"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="10">
+                <Entry x:Name="newTaskEntry"
+                       Placeholder="Enter the name of the task"
+                       MinimumWidthRequest="400"
+                       MaximumWidthRequest="800" />
+                <Button x:Name="addTaskBtn"
+                        Text="Add"
+                        Clicked="addTaskBtn_Clicked" />
+            </HorizontalStackLayout>
+
+
+            <ListView
+                x:Name="tasksList"
+                SeparatorVisibility="Default"
+                HasUnevenRows="True"
+                >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="10"
+                                ColumnDefinitions="*, auto, auto, auto, auto"
+                                ColumnSpacing="10"
+                                RowDefinitions="Auto"
+                                VerticalOptions="Center">
+
+                                <Label
+                                    Text="{Binding Name}"
+                                    TextColor="White"
+                                    FontAttributes="Bold"
+                                    FontSize="16"
+                                    VerticalOptions="Center"
+                                    Grid.Column="0"
+                                    HorizontalOptions="StartAndExpand"
+                                    />
+                                
+                                <Label
+                                    Text="{Binding ElapsedTime}"
+                                    TextColor="White"
+                                    FontSize="16"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="End"
+                                    Grid.Column="1"
+                                    />
+                                
+                                <Button
+                                    Text="Start"
+                                    Grid.Column="2"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="{Binding StartButtonColor}"
+                                    TextColor="White"
+                                    Command="{Binding StartTimerCommand}"
+                                    />
+
+                                <Button
+                                    Text="Stop"
+                                    Grid.Column="3"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="{Binding EndButtonColor}"
+                                    TextColor="White"
+                                    Command="{Binding StopTimerCommand}"
+                                    />
+                                
+                                <Button
+                                    Text="Complete"
+                                    Grid.Column="4"
+                                    HorizontalOptions="End"
+                                    VerticalOptions="Center"
+                                    BackgroundColor="Violet"
+                                    IsEnabled="{Binding IsCompleteButtonEnabled}"
+                                    TextColor="Black"
+                                    Command="{Binding CompleteCommand}"
+                                    />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

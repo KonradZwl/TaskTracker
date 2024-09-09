@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskTracker.Maui", "TaskTracker.Maui\TaskTracker.Maui.csproj", "{331CF936-26D5-42A9-B675-C134934CB1BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{331CF936-26D5-42A9-B675-C134934CB1BA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {60F9FC83-459B-43AA-99C6-528BCA0F7497}
+	EndGlobalSection
+EndGlobal
